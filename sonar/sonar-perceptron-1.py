@@ -1,3 +1,5 @@
+# As seen on http://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/
+# Just trying to learn it
 def predict(row, weights):
 	activation = weights[0]
 	for i in range(len(row)-1):
