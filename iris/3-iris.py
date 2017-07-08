@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import Perceptron
+import plot_decision_regions
 
 df = pd.read_csv('iris.csv', header=None)
 
@@ -29,4 +30,12 @@ ppn.fit(X, y)
 plt.plot(range(1, len(ppn.errors_) + 1), ppn.errors_, marker='o')
 plt.xlabel('Epochs')
 plt.ylabel('Number of misclassifications')
+plt.show()
+
+
+
+plot_decision_regions.plot_decision_regions(X, y, classifier=ppn)
+plt.xlabel('sepal length [cm]')
+plt.ylabel('petal length [cm]')
+plt.legend(loc='upper left')
 plt.show()
