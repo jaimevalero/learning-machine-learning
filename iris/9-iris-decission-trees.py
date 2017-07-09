@@ -83,4 +83,4 @@ plt.legend(loc='upper left')
 #plt.show()
 
 
-export_graphviz(tree, label=iris.target_names,out_file='/Users/jaimevalerodebernabe/git/sci-kit/iris/tree.dot',feature_names=['petal length', 'petal width'])
+export_graphviz(tree, label=iris.target_names,out_file='tree.dot',feature_names=['petal length', 'petal width'])
