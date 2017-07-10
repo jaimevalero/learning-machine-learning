@@ -11,6 +11,7 @@ from sklearn.pipeline import Pipeline
 df = pd.read_csv('wdbc.data',
        header=None)
 
+
 from sklearn.preprocessing import LabelEncoder
 # We assign the 30 features to a NumPy array X.
 X = df.loc[:, 2:].values
