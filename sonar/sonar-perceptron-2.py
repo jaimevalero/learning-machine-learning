@@ -1,5 +1,8 @@
+# As seen on http://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/
+
 # Make a prediction with weights
 def predict(row, weights):
+	print('predict: ' , row , ' ' , weights )
 	activation = weights[0]
 	for i in range(len(row)-1):
 		activation += weights[i + 1] * row[i]
@@ -18,6 +21,7 @@ def train_weights(train, l_rate, n_epoch):
 			for i in range(len(row)-1):
 				weights[i + 1] = weights[i + 1] + l_rate * error * row[i]
 		print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
+		print weights
 	return weights
 
 # Calculate weights
@@ -31,7 +35,7 @@ dataset = [[2.7810836,2.550537003,0],
 	[6.922596716,1.77106367,1],
 	[8.675418651,-0.242068655,1],
 	[7.673756466,3.508563011,1]]
-l_rate = 0.1
-n_epoch = 5
+l_rate = 0.001
+n_epoch = 8
 weights = train_weights(dataset, l_rate, n_epoch)
 print(weights)
